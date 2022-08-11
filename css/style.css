@@ -79,3 +79,58 @@ body{
     height: 30px;
     border-radius: 50%;
 }
+
+/* notification (heart)*/
+
+.activity-log{
+    position: relative;
+    height: 25px;
+}
+
+.activity-container{
+    width: 350px;
+    height: auto;
+    max-height: 350px;
+    position: absolute;
+    top: 200%;
+    right: 0;
+    background: #fff;
+    border: 1px solid rgb(219, 219, 219);
+}
+
+.activity-container.hide{
+    display: none;
+    
+}
+
+.activity-card{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.activity-card:hover{
+    background-color: #fafafa;
+}
+
+.user-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.activity{
+    width: 200px;
+    font-size: 1rem;
+}
+
+.activity-post{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
