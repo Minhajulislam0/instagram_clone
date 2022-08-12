@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CloneSta</title>
+    <title>CloniSta</title>
     <!-- font awesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- css stylesheet -->
     <link rel="stylesheet" href="./css/style.css">
@@ -16,7 +16,7 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <img src="./images/logo.png" class="logo" alt="insta_logo">
+        <a href="#"><img src="./images/logo.png" class="logo" alt="insta_logo"></a>
 
         <!-- search Form -->
         <form class="search-box">
@@ -70,8 +70,63 @@
 
     </nav>
 
+    <!-- main section -->
+    <section class="main">
+        <!-- post section-->
+        <div class="post-container">
+            <div class="post">
+              <div class="post-header">
+                <img src="./images/users/user2.png" class="user-icon" alt="">
+                <p class="username">@monkey_D_luffy</p>
+              </div>
+              <div class="post-feed" >
+                <!-- post like  -->
+                <div class="post-overlays">
+                  <img src="./images/icon/red-heart.png" class="like-icon " alt="">
+                </div>
+
+                <div class="post-img-container">
+                  <img src="./images/posts/post1.png" alt="">
+                  <img src="./images/posts/post2.png" alt="">
+                  <img src="./images/posts/post3.png" alt="">
+                  <img src="./images/posts/post4.png" alt="">
+                  <img src="./images/posts/post5.png" alt="">
+                </div>
+              </div>
+
+              <div class="post-detail">
+                <div class="detail-interactions">
+                  <img src="./images/icon/heart-nofill.png" class="like-btn" alt="">
+                  <img src="./images/icon/comment-nofill.png" class="comment-btn" alt="">
+                  <img src="./images/icon/send-nofill.png" class="send-btn" alt="">
+                </div>
+
+                <p class="likes">2.7K likes</p>
+                <p class="post-des"> <span class="post-username">@monkey_D_luffy</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quibusdam ullam et soluta eum laudantium neque aut qui. Nihil est, ipsa tempore tenetur ullam nemo amet! Repellendus culpa molestiae quisquam.</p>
+
+                <!-- comment-box -->
+                <div class="comment-box">
+                  <input type="text" id="comment-input" placeholder="Add a Comment">
+                  <button class="add-comment-btn"> <img src="./images/icon/comment-nofill.png" alt=""> </button>
+                </div>
+                <span class="comment-count">300 Comments</span>
+
+              </div>
+
+            </div>
+        </div>
+    </section>
 
     <!-- js link -->
-    <script src="./js/app.js"></script>
+
+    <script src="./js/font-awesome.js"></script>
+    <script src="./js/notification.js"></script>
+    <script src="./js/post.js"></script>
+    
+
+
 </body>
 </html>
+
+
+
