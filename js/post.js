@@ -8,19 +8,25 @@ const changeIcon = (icon)=>{
     }   
 }
 
+// interection to all post
 
-// like
+const addInteractionsToPost= (post) =>{
 
-let likeBtn = document.querySelector('.like-btn');
-let likePopup = document.querySelector('.like-icon');
+    // like
+
+let likeBtn = post.querySelector('.like-btn');
+let likePopup = post.querySelector('.like-icon');
 
 likeBtn.addEventListener('click',()=>{
     if (likeBtn.src.includes('nofill')){
         likePopup.classList.add('show');
+        if(shareIcon.src.includes('-fill')){
+            shareIcon.click()
+        }
     }
     // icon fill calback 
     changeIcon(likeBtn)
-    
+
     setTimeout(()=>{
         likePopup.classList.remove('show');
     },2000);
@@ -29,6 +35,31 @@ likeBtn.addEventListener('click',()=>{
 })
 
 
+// share post
+
+let shareIcon = post.querySelector('.send-btn');
+let sharePost = post.querySelector('.share-post');
+
+shareIcon.addEventListener('click', ()=>{
+    sharePost.classList.toggle('active');
+    changeIcon(shareIcon)
+})
 
 
+// user link copy
 
+let postLink = post.querySelector('#share-link').value;
+let copyLinkBtn = post.querySelector('.copy-btn');
+
+copyLinkBtn.addEventListener('click', ()=>{
+    navigator.clipboard.writeText(postLink).then(()=>{
+        shareIcon.click();
+    })
+})
+
+}
+
+// post
+
+let posts = [...document.querySelectorAll('.post')];
+posts.map(post => addInteractionsToPost(post));

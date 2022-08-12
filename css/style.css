@@ -330,3 +330,54 @@ body{
         transform: scale(1);
     }
 }
+
+
+/* share post */
+.share-post{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    width: 70%;
+    transition: .5s;
+    opacity: 0;
+}
+
+.share-post.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.share-post .title{
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.share-link-container{
+    width: 100%;
+    display: flex;
+    border: 1px solid rgb(219, 219, 219);
+}
+
+#share-link{
+    height: 30px;
+    padding: 10px;
+    background-color: #fafafa;
+    border: none;
+    color: #999;
+    width: 200%;
+}
+
+.copy-btn{
+    background: #2e91ee;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #a1cbf1;
+    text-transform: capitalize;
+    width: 100px;
+}
